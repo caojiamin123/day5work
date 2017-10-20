@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>work43作业讲解.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript">
+window.onload=function(){
+	var otxt1=document.getElementById("txt1");
+	var otxt2=document.getElementById("txt2");
+	var os1=document.getElementById("s1");
+	var obtn=document.getElementById("btn");
+	
+	obtn.onclick=function(){
+		var a=otxt1.value;
+		var b=otxt2.value;
+		var c=os1.value;
+		alert(typeof a);   //string
+		//c=="+"&&alert(a+b);
+	};
+};
+</script>
+  </head>
+  
+  <body>
+    <input type="text" id="txt1">
+    <select id="s1">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="txt2">
+    <input type="button" value="按钮" id="btn">
+  </body>
+</html>

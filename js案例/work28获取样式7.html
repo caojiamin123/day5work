@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>work28获取样式7.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<style type="text/css">
+#div{
+     width:200px;
+	 height:200px;
+	 background:blue;
+     }
+</style>
+<script type="text/javascript">
+function getStyle(obj,attr){
+	if(obj.currentStyle){
+		return obj.currentStyle[attr];
+	}else{
+		return getComputedStyle(obj,false)[attr];
+	}	
+}
+
+window.onload=function(){
+	var obox=document.getElementById("box");
+	var odiv=document.getElementById("div");
+	obox.onclick=function(){
+		alert(getStyle(obox,"width"));
+	};
+	odiv.onclick=function(){
+		alert(getStyle(odiv,"height"));
+	};
+	//getStyle(obj,width);->200px;
+};
+</script>
+  </head>
+  
+  <body>
+    <div id="box" style="width:400px;height:400px;background:green;"></div>
+    <div id="div"></div>
+  </body>
+</html>

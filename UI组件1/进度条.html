@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">进度条</h1>
+		</header>
+		<div class="mui-content">
+		    <div id="demo1" class="mui-progressbar">
+		    	<span></span>
+		    </div>
+		    <br />
+		    <button id="change" type="button" class="mui-btn mui-btn-blue">更改进度条</button>
+		    <button id="close" type="button" class="mui-btn mui-btn-blue">关闭进度条</button>
+		</div>
+	</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var ochange=document.querySelector("#change");
+		var oclose=document.querySelector("#close");
+		mui("#demo1").progressbar({progress:59}).show();
+		
+		ochange.onclick=function(){
+				mui("#demo1").progressbar().setProgress(20);
+		}
+		oclose.onclick=function(){
+				mui("#demo1").progressbar().hide();
+		}
+	}
+</script>
+</html>

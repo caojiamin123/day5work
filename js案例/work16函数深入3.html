@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>work16函数深入3.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script type="text/javascript">
+function show(a){
+	//alert(1);
+	return function(b){
+		//alert(2);
+		return function(c){
+			return a+b+c;
+		};
+	};
+}
+alert(show(1)(2)(3));
+</script>
+  </head>
+  
+  <body>
+  </body>
+</html>
